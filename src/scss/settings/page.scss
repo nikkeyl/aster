@@ -1,0 +1,11 @@
+.page {
+    transition: all 0.3s ease;
+
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    .loaded & {
+    }
+}

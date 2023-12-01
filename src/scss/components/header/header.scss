@@ -1,0 +1,190 @@
+// @import "./menu";
+@import "./icon-menu";
+
+//HEADER========================================================================================================================================================//
+.header {
+    @include adaptive-value("padding-top", 10, 20);
+    @include adaptive-value("padding-bottom", 10, 20);
+    @include adaptive-value("padding-right", 23, 15);
+    @include adaptive-value("padding-left", 23, 15);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(20);
+
+    &__search {
+    }
+
+    &__icon-menu {
+        flex: 0 0 rem(30);
+    }
+
+    &__body {
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        gap: rem(20);
+    }
+
+    &__button {
+        display: inline-flex;
+        justify-content: space-between;
+        gap: rem(5);
+        border: rem(0.2) solid $color-dark-blue-2;
+        border-radius: rem(4);
+        padding: rem(14);
+        max-width: rem(256);
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+        background: $color-light-gray;
+        transition: all 0.3s ease;
+
+        span {
+            flex: 1 1 auto;
+            color: $color-light-blue;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                .header__icon {
+                    transform: translateX(rem(4));
+                }
+            }
+        }
+    }
+
+    &__icon {
+        @include wh(rem(20), rem(20));
+
+        fill: none;
+        stroke: $color-dark-blue-2;
+        transition: all 0.3s ease;
+    }
+
+    &__profile {
+    }
+
+    @media (max-width: md(712)) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 90;
+        width: 100%;
+        background-color: $color-light-gray;
+    }
+}
+
+.search {
+    display: flex;
+    flex: 1 1 auto;
+    border-radius: rem(4);
+    padding: rem(14);
+    background: rgb(47 159 248 / 10%);
+    transition: all 0.3s ease;
+
+    &__input {
+        flex: 1 1 auto;
+        background: none;
+
+        &::placeholder {
+            font-size: rem(15);
+            line-height: math.div(18, 15);
+            color: rgb(83 81 81 / 51.4%);
+
+            @media (max-width: md($mobile-small)) {
+                color: rgb(255 255 255);
+            }
+        }
+    }
+
+    &__button {
+        background: none;
+
+        &--1 {
+            @media (min-width: em($mobile-small)) {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        @include wh(rem(18), rem(18));
+
+        display: flex;
+        fill: none;
+        stroke: $color-dark-blue-2;
+    }
+
+    &.hide {
+        top: -150%;
+    }
+
+    @media (min-width: em($mobile-small)) {
+        max-width: rem(495);
+    }
+
+    @media (max-width: md($mobile-small)) {
+        position: absolute;
+        left: 0;
+        top: rem(60);
+        z-index: 70;
+        width: 100%;
+        background: rgb(47 159 248);
+    }
+}
+
+// .search-popup {
+//     display: flex;
+//     flex: 1 1 100%;
+//     border-radius: rem(4);
+//     padding: rem(14);
+//     max-width: rem(495);
+//     background: rgb(47 159 248 / 4%);
+
+//     &__input {
+//         flex: 1 1 100%;
+//         background: none;
+
+//         &::placeholder {
+//             font-size: rem(15);
+//             line-height: math.div(18, 15);
+//             color: rgb(7 45 75 / 30%);
+//         }
+//     }
+// }
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(36);
+    max-width: rem(150);
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: rem(13);
+    }
+
+    &__arrow {
+        @include wh(rem(18), rem(18));
+
+        fill: none;
+        stroke: $color-dark-blue-2;
+        transform: rotate(90deg);
+        cursor: pointer;
+    }
+
+    &__user {
+        @include wh(rem(18), rem(18));
+
+        fill: none;
+        stroke: $color-dark-blue-2;
+    }
+
+    &__name {
+    }
+}

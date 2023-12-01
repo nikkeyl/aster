@@ -1,0 +1,305 @@
+//========================================================================================================================================================//
+.more-news {
+    @include adaptive-value("padding-bottom", 54, 20);
+
+    // .more-news__title
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+
+    &__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: rem(15);
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+
+        span {
+            flex: 1 1 auto;
+            height: rem(0.1);
+            background-color: $color-dark-blue-2;
+        }
+    }
+
+    // .more-news__cards
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: rem(20);
+    }
+
+    // .more-news__news
+
+    &__news {
+        flex: 1 1 rem(375);
+    }
+}
+
+//========================================================================================================================================================//
+.news-wrapper {
+    // .news-wrapper__title
+    display: flex;
+    flex-direction: column;
+    padding-bottom: rem(32);
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(26);
+        line-height: math.div(34, 26);
+
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+    }
+
+    // .news-wrapper__labels
+
+    &__labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(10);
+
+        &:not(:last-child) {
+            margin-bottom: rem(21);
+        }
+    }
+
+    // .news-wrapper__label
+
+    &__label {
+        border-radius: rem(4);
+        padding: rem(4) rem(11);
+        font-size: 12px;
+        line-height: 14px;
+        color: $color-dark-blue;
+        background: rgb(48 158 248 / 20%);
+        transition: all 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light;
+                background: rgb(48 158 248 / 100%);
+            }
+        }
+    }
+
+    // .news-wrapper__sub-title
+
+    &__sub-title {
+        font-size: rem(17);
+        line-height: math.div(20, 17);
+        opacity: 0.6;
+
+        &:not(:last-child) {
+            margin-bottom: rem(35);
+        }
+    }
+
+    // .news-wrapper__image-ibg
+
+    &__image-ibg {
+        overflow: hidden;
+        border-radius: rem(4);
+        padding-bottom: percent(435, 774);
+        background-color: $color-gray;
+
+        &:not(:last-child) {
+            margin-bottom: rem(38);
+        }
+    }
+
+    // .news-wrapper__text
+
+    &__text {
+        font-size: rem(17);
+        line-height: rem(28);
+        opacity: 0.6;
+
+        &:not(:last-child) {
+            margin-bottom: rem(28);
+        }
+    }
+
+    // .news-wrapper__list
+
+    &__list {
+        padding-left: rem(10);
+
+        &:not(:last-child) {
+            margin-bottom: rem(28);
+        }
+    }
+
+    // .news-wrapper__item
+
+    &__item {
+        position: relative;
+        padding-left: rem(30);
+        font-size: rem(17);
+        line-height: rem(40);
+        opacity: 0.6;
+
+        &::before {
+            @include pseudo;
+            @include wh(rem(13), rem(13));
+
+            left: 0;
+            top: 50%;
+            background-color: $color-light-blue;
+            transform: translateY(-50%);
+        }
+    }
+
+    // .news-wrapper__info
+
+    &__info {
+        align-self: center;
+        text-align: center;
+    }
+
+    // .news-wrapper__date
+
+    &__date {
+        font-size: rem(12);
+        line-height: math.div(28, 12);
+        opacity: 0.3;
+    }
+
+    // .news-wrapper__author
+
+    &__author {
+        font-size: rem(12);
+        line-height: math.div(28, 12);
+
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__go-top {
+        font-size: rem(12);
+        line-height: math.div(28, 12);
+        text-decoration: underline !important;
+        color: $color-light-blue;
+
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
+
+//========================================================================================================================================================//
+.comments {
+    @include adaptive-value("padding-bottom", 66, 20);
+
+    // .comments__title
+
+    &__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: rem(15);
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+
+        span {
+            flex: 1 1 auto;
+            height: rem(0.1);
+            background-color: $color-dark-blue-2;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    // .comments__form
+
+    &__form {
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    // .comments__view
+
+    &__view {
+    }
+
+    // .comments__show-all
+
+    &__show-all {
+        transition: all 0.3s ease 0.3s;
+
+        &.spoller-active {
+            margin-bottom: rem(37);
+            transition-delay: 0s;
+        }
+    }
+
+    // .comments__more
+
+    &__more {
+    }
+
+    &__comment {
+        &:not(:last-child) {
+            margin-bottom: rem(21);
+        }
+    }
+}
+
+.show-all {
+    // .show-all__text
+    display: flex;
+    align-items: center;
+    gap: rem(14);
+
+    &__text {
+        display: flex;
+        font-weight: 500;
+
+        // gap: rem(10);
+        font-size: rem(17);
+        line-height: math.div(20, 17);
+        text-decoration: underline !important;
+        text-transform: capitalize;
+        color: $color-light-blue;
+        cursor: pointer;
+    }
+
+    // .show-all__icon
+
+    &__icon {
+        @include wh(rem(24), rem(24));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $color-light-blue;
+        cursor: pointer;
+
+        svg {
+            @include wh(rem(13), rem(9));
+
+            fill: none;
+            stroke: $color-light;
+            transform: rotate(90deg);
+            transition: transform 0.3s ease;
+
+            .spoller-active & {
+                transform: rotate(270deg);
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================//
+
+//========================================================================================================================================================//

@@ -1,0 +1,141 @@
+@import "button";
+
+.newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(20);
+    border-radius: rem(4);
+    padding: rem(15) rem(28);
+    background: #ffe8c5;
+
+    &__body {
+        flex: 1 1 rem(420);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+
+        &:not(:last-child) {
+            margin-bottom: rem(13);
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        gap: rem(13);
+    }
+
+    &__input {
+        flex: 1 1 rem(290);
+        border-radius: rem(4);
+        padding: rem(10) rem(13);
+        background: #fff5e6;
+
+        &::placeholder {
+            font-size: rem(15);
+            line-height: math.div(18, 15);
+            color: $color-dark-blue-2;
+            opacity: 0.3;
+        }
+    }
+
+    &__button {
+        flex: 1 1 rem(116);
+        transition: all 0.3s ease;
+
+        .form-error & {
+            background-color: #d70d0d;
+        }
+    }
+
+    &__img {
+        @include wh(rem(170), rem(110));
+
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+}
+
+.subscribe {
+    border-radius: rem(4);
+    padding: rem(21);
+    box-shadow: 0 rem(2) rem(20) rgb(0 0 0 / 4%);
+    background: $color-light;
+
+    &__title {
+        font-size: rem(15);
+        line-height: math.div(18, 15);
+
+        &:not(:last-child) {
+            margin-bottom: rem(12);
+        }
+    }
+
+    &__input {
+        border: rem(0.1) solid $color-dark-blue;
+        border-radius: rem(4);
+        padding: rem(10) rem(15);
+        width: 100%;
+        background: $color-light-gray;
+
+        &::placeholder {
+            font-size: rem(15);
+            line-height: math.div(18, 15);
+            color: $color-dark-blue;
+            opacity: 0.3;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    &__button {
+        width: 100%;
+        transition: all 0.3s ease;
+
+        .form-error & {
+            background-color: #d70d0d;
+        }
+    }
+}
+
+.form-comments {
+    // .form-comments__input
+
+    &__input {
+        border-radius: rem(4);
+        padding: rem(12) rem(18);
+        width: 100%;
+        height: rem(96);
+        background: #ecf5f8;
+        resize: none;
+
+        &::placeholder {
+            font-size: rem(15);
+            line-height: math.div(18, 15);
+            color: rgb(7 45 75 / 30%);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem(11);
+        }
+
+        @extend %hide-scroll;
+    }
+
+    // .form-comments__button
+
+    &__button {
+        width: rem(169);
+
+        @media (max-width: md($mobile-small)) {
+            width: 100%;
+        }
+    }
+}

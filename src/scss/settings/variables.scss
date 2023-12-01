@@ -1,0 +1,37 @@
+$container-type         : 0;
+//---------------------------------//
+$max-width-container    : 0;
+$container-padding      : 30;
+//---------------------------------//
+$max-width              : 1440;
+$min-width              : 320;
+//---------------------------------//
+$container-width        : $max-width-container + $container-padding;
+$pc                     : $container-width;
+$tablet                 : 992;
+$mobile                 : 768;
+$mobile-small           : 480;
+//---------------------------------//
+$ibg-contain            : 0;
+$slider-fix             : 0;
+//---------------------------------//
+$color-dark             :#000;
+$color-dark-gray        :#333;
+$color-gray             :#888;
+$color-light-gray       :#F4F9F8;
+$color-light            :#fff;
+$color-purple           :#80f;
+$color-yellow           :#fe0;
+$color-red              :#f00;
+$color-blue             :#00f;
+$color-light-blue       :#2F9FF8;
+$color-dark-blue        :#0768B5;
+$color-dark-blue-2      :#072D4B;
+//---------------------------------//
+$main-font-family       : 'Roboto';
+$main-font-weight       : 400;
+$main-font-size         : 14;
+$main-background-color  : $color-light-gray;
+$main-font-color        : $color-dark-blue-2;
+$a-focus-active-outline : 0;
+$focus-active-outline   : 1;

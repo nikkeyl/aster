@@ -1,0 +1,60 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    border-radius: rem(5);
+    padding: rem(10) rem(25);
+    font-size: rem(15);
+    line-height: math.div(18, 15);
+    text-align: center;
+    text-transform: capitalize;
+    color: $color-light;
+    background-color: $color-light-blue;
+    transition: all 0.3s ease;
+
+    &::before {
+    }
+
+    &::after {
+    }
+
+    &:link {
+    }
+
+    &:visited {
+    }
+
+    &:focus {
+    }
+
+    &:active {
+        transform: translateY(rem(3));
+    }
+
+    &:disabled {
+    }
+
+    &--dark {
+        background-color: $color-dark-blue;
+    }
+
+    &--border {
+        border: rem(0.2) solid $color-light-blue;
+        padding: rem(10) rem(17);
+        color: $color-light-blue;
+        background-color: $color-light;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-light !important;
+                background-color: $color-light-blue !important;
+            }
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $color-dark-blue;
+            background-color: $color-light-gray;
+        }
+    }
+}
